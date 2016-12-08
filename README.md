@@ -1,8 +1,7 @@
 # ShooterLocalizationProject
 This project was developed at MSU in 2013. It is a shooter localization system that uses arduinos in coordination with a central CPU to calculate the location of the shot. This system was validated outdoors with outstanding results. It was intended to work indoors too, but further implementations are necessary.
-
+```sh
 ShooterLocalizationProject/
-  |
   |
   |_src/
   |  |_serial.c
@@ -20,7 +19,7 @@ ShooterLocalizationProject/
   |_vid1/
      |_file.txt
      |_VID1-7shots-file1-2013-07-12 12.32.11.mp4
-
+```
 
 The arduino nodes use the **node.c** codes in order to hear the gunshot sound. A customized shield was developed using an a microphone, an analog filter and a peak detector to detect the sound and convert it via the analog pins of the arduino. All arduinos were connected via serial cable and used a TDM communication protocol to send the data to the central CPU. Whenever a high amplitude sound is detected, the arduinos digitalize it, wait its send time slice (according to its ID), and send it to the central, where all the calculation is done.
 
@@ -31,10 +30,8 @@ The **serial.c** program is am interpreter program for the FTDI RS485 device use
 The **map.txt** file describes the map, where each character represents a meter squared. The * represents obstacle areas (i.e. walls) and the empty spaces are free areas.
 
 Finally, the **vid0** and **vid1** folders contain a file.txt that presents the traced data from the arduinos in a live experiment. Both files a video related to it, that plays the moment the data was recorded. The link to these videos is presented below.
-- vid0:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lFRdnB4KtSY" frameborder="0" allowfullscreen></iframe>
-- vid1:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/P0RbY1kCd94" frameborder="0" allowfullscreen></iframe>
+- <a href=https://www.youtube.com/embed/lFRdnB4KtSY>vid0<\a>
+- <a href=https://www.youtube.com/embed/P0RbY1kCd94>vid1<\a>
 
 ###Compiling
 
