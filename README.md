@@ -36,16 +36,17 @@ Finally, the **vid0** and **vid1** folders contain a file.txt that presents the 
 ###Compiling
 
 On the project root folder run the following commands:
-
+```sh
 For file of vid0: $ ./compile 0 
 For file of vid1: $ ./compile 1
- 
+```
 For cleaning the compilation files run on the root folder:
+```sh
 $ ./compile -clean
-
+```
 ###Running
-
+```sh
 $ cd sim
 $ findshooter map.txt file.txt results.txt
-
+```
 The results will be printed on the results.txt file and on the screen.
