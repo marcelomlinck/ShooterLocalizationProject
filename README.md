@@ -27,9 +27,9 @@ The **server.c** program receives the arduino data and calculate the location of
 
 The **serial.c** program is am interpreter program for the FTDI RS485 device used to communicate the arduinos with the central CPU via serial to USB conversion.
 
-The **map.txt** file describes the map, where each character represents a meter squared. The * represents obstacle areas (i.e. walls) and the empty spaces are free areas.
+The **map.txt** file describes the map, where each character represents a meter squared. The * represents obstacle areas (i.e. walls) and the empty spaces are free areas. The numbers on the map represent the location of the arduino nodes, each number is the node ID.
 
-Finally, the **vid0** and **vid1** folders contain a file.txt that presents the traced data from the arduinos in a live experiment. Both files a video related to it, that plays the moment the data was recorded. The link to these videos is presented below.
+Finally, the **vid0** and **vid1** folders contain a file.txt that presents the traced data from the arduinos in a live experiment. Both files a video related to it, that plays the moment the data was recorded. For these tests, it was used 4 arduino nodes. The link to these videos is presented below.
 - <a href=https://www.youtube.com/embed/lFRdnB4KtSY>vid0</a>
 - <a href=https://www.youtube.com/embed/P0RbY1kCd94>vid1</a>
 
