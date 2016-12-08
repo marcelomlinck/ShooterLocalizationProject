@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [ "$1" != "-clean" ] && [ "$1" != 0 ] && [ "$1" != 1 ] 
+then
+	echo "Invalid option!"
+	echo -e "Options: \n\t0 - vid0\n\t1 - vid1\n\t-clean - cleaning compilation files"
+	exit
+fi
+
+if [ $1 == "-clean" ] 
+then
+	rm -rf sim
+else
+	mkdir sim
+	cd sim
+	cp ../map/map.txt .
+	if [ "$1" == 0 ]
+	then
+		cp ../vid0/file.txt . 
+	elif [ "$1" == 1 ]
+	then
+		cp ../vid1/file.txt . 
+	fi
+	gcc -o postproc ../src/postproc.c -lm
+fi
